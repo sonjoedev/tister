@@ -1,0 +1,132 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css"/>
+<title>titl</title>
+
+
+
+</head>
+
+
+<body>
+<div class="container">
+<div class="menu">
+<a id="menu-toptext">Menu<a>
+<a >Login<a>
+<a>Theme<button class="toggle"></button><a>
+<a>LeaderBoard(soon)<a>
+<a>info<a>
+<a href="loginpage.html">FeedBack<a>
+<a><button id="tglbtn2" class="btn-close">X</button><a><a>
+</div>
+<div class="header">
+<h1>Select One</h1>
+<i id="tglbtn" >m</i>
+</div>
+<div class="content">
+<button class="btn" onclick="guss(0)" >0</button>
+<button class="btn" onclick="guss(1)" >1</button>
+<button class="btn" onclick="guss(2)" >2</button>
+<button class="btn" onclick="guss(3)" >3</button>
+<p id="demo">The Winner...</p>
+<p id="cguss">The Computer Guss</p>
+<p id="score">SCORES</p>
+<p id="tests">Testprogress</p>
+<button class="btnh" onclick="history()" >History</button>
+<div>
+<div id="history">
+</div>
+<button id="btnb" onclick="clos()" >Close</button>
+</div>
+</div>
+</div>
+</body>
+
+<script>
+//document.getElementById("history").style="display:none"
+var x,winner,color
+var p = 0
+var c = 0
+function guss(g){
+document.getElementsByClassName("btn")[0].style="background:gray;"
+document.getElementsByClassName("btn")[1].style="background:gray;"
+document.getElementsByClassName("btn")[2].style="background:gray;"
+document.getElementsByClassName("btn")[3].style="background:gray;"
+switch (g){
+case 0: x=0; break;
+case 1: x=1; break;
+case 2: x=2; break;
+case 3: x=3; break;
+}
+var y = Math.floor(Math.random()*4)
+ if(x==y){winner = "player"; p+= 1}else{winner = "Computer"; c+= 1}
+ if(c==0){c==1}
+ var percenage= p/c
+ var res=(Math.floor(percenage*=100))/2
+document.getElementsByClassName("btn")[x].style="background:red;"
+document.getElementsByClassName("btn")[y].style="background:green;"
+
+document.getElementById("demo").innerHTML=("Winner is"+ " " + winner)
+
+if(winner=="player")
+{document.getElementById("demo").style.color = "green"}
+else
+{document.getElementById("demo").style.color = "red"}
+
+
+document.getElementById("score").innerHTML=("Computer Score" + " = " + c + "</br>" + "Player Score" + " = " + p + " " +"WinRate"+" "+res+"%")
+document.getElementById("cguss").innerHTML=("Computer Guss Was" + " = " + y)
+var ts= p-c
+var testscore= ts*=100
+document.getElementById("tests").innerHTML=(testscore)
+
+var para = document.createElement("P")
+var his= document.createTextNode("player"+ " = " + x + " " +"Computer" + " = " + y + "    " + "winner was" + "   " +winner)
+
+
+para.appendChild(his)
+if(winner=="player")
+{para.style.color = "green"}
+else
+{para.style.color = "red"}
+
+
+var element = document.getElementById("history")
+element.appendChild(para)
+
+
+}
+const togglethemebtn = document.querySelector('.toggle')
+togglethemebtn.addEventListener("click",()=>{
+document.body.classList.toggle("lightblue")
+
+})
+
+function history(){
+document.getElementById("history").style="display:block"
+document.getElementById("btnb").style="display:block"}
+function clos(){
+document.getElementById("history").style.display="none"
+document.getElementById("btnb").style="display:none"}
+
+const menu= document.querySelector('.menu')
+const togglebutton = document.getElementById('tglbtn')
+togglebutton.addEventListener('click',()=>{
+menu.style.right = menu.style.right === '0px' ? '-300px' : '0px';
+});
+const togglebutton2 = document.getElementById('tglbtn2')
+togglebutton2.addEventListener('click',()=>{
+menu.style.right = menu.style.right === '0px' ? '-300px' : '0px';
+})
+
+
+
+
+
+
+
+
+
+</script>
