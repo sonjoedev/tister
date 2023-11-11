@@ -346,6 +346,7 @@ width:60px;
 height:30px;
 font-size:17;}
 p{margin:10px}
+.menu{left:500;}
 }
 
 @media (orientation:landscape) {
