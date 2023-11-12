@@ -1,4 +1,4 @@
-‌:root {
+‌:root{
 --clr-text:white;
 --clr-bd: #022e61;
 --clr-black: black;
@@ -30,7 +30,9 @@ font-size: 20;
 background-attachment:fixed;
 margin: 0px;
 }
+
 #img{width:150px; height:150px; border: 2px solid white;}
+
 /*container*/
 
 .container{
