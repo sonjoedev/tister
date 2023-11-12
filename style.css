@@ -30,7 +30,7 @@ font-size: 20;
 background-attachment:fixed;
 margin: 0px;
 }
-
+#img{width:100px; height:100px;}
 /*container*/
 
 .container{
