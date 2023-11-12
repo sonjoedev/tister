@@ -56,6 +56,13 @@
 var x,winner,color
 var p = 0
 var c = 0
+ document.addEventListener('keydown', function(event){
+  var key= event.key
+  if(key==='1'){guss(0)}
+  if(key==='2'){guss(1)}
+  if(key==='3'){guss(2)}
+  if(key==='4'){guss(3)}
+ })
 function guss(g){
 document.getElementsByClassName("btn")[0].style="background:gray;"
 document.getElementsByClassName("btn")[1].style="background:gray;"
