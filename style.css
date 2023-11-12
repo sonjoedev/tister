@@ -76,7 +76,7 @@ background: #022e61;
 color:var(--clr-topI);
 }
 
-#tests,score,cguss, demo{
+#tests,#score,#cguss,#demo{
 user-select:none;
 }
 #demo{margin:0 auto;}
