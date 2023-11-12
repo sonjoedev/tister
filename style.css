@@ -147,7 +147,7 @@ border: 2px solid var(--clr-white);
 /*menu*/
 
 .menu{
-border-radius:100px;
+border-radius:50px;
 overflow-y:scroll;
 text-align:center;
 overflow:hidden;
