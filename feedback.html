@@ -40,7 +40,7 @@
       var subject = document.getElementById("subject").value;
       var message = document.getElementById("message").value;
       var resultElement = document.getElementById("result");
-
+      sendmail()
       function sendemail() {
         window.location.href = `mailto:gaming01010@gmail.com?subject=${subject}&body=${message}`;
       }
