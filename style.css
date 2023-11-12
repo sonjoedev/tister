@@ -30,7 +30,7 @@ font-size: 20;
 background-attachment:fixed;
 margin: 0px;
 }
-#img{width:200px; height:200px; border: 2px solid white;}
+#img{width:150px; height:150px; border: 2px solid white; position: absolute ;margin-left:10px;}
 /*container*/
 
 .container{
