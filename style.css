@@ -70,7 +70,7 @@ margin-right:10px;
 position:relative;
 color:black;
 font-size: 40;
-background: var(--clr-bd);
+background: #022e61;
 }
 .header i:hover{
 color:var(--clr-topI);
