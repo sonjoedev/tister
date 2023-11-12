@@ -1,4 +1,4 @@
-
+ 
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -35,7 +35,7 @@
 <button class="btn" onclick="guss(2)" >2</button>
 <button class="btn" onclick="guss(3)" >3</button>
 </div>
- <h1 onclick="alert("to shoohoor nadary")">esfandi kojooloo</h1>
+ <h1 id='ali'>esfandi kojooloo</h1>
 
 <p id="demo">The Winner...</p>
 <p id="cguss">The Computer Guss</p>
@@ -128,8 +128,8 @@ togglebutton2.addEventListener('click',()=>{
 menu.style.right = menu.style.right === '0px' ? '100%' : '0px';
 })
 
-
-
+const ali = document.getElementById('ali')
+ali.addEventListener('click', ()=>{alert("to shoohoor nadary")})
 
 
 
