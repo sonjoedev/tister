@@ -34,7 +34,33 @@
   
   
   <script>
+   // Example data array
+   const leaderboardData = [
+      { rank: 1, name: 'John', score: 100 },
+      { rank: 2, name: 'Jane', score: 90 },
+      { rank: 3, name: 'Bob', score: 80 },
+      // Add more objects as per your requirement
+   ];
 
+   // Function to populate leaderboard rows
+   function populateLeaderboard() {
+      const leaderboardTable = document.getElementById('leaderboard');
+      const leaderboardBody = leaderboardTable.getElementsByTagName('tbody')[0];
+
+      leaderboardData.forEach((player) => {
+         const row = leaderboardBody.insertRow();
+         const rankCell = row.insertCell(0);
+         const nameCell = row.insertCell(1);
+         const scoreCell = row.insertCell(2);
+
+         rankCell.innerHTML = player.rank;
+         nameCell.innerHTML = player.name;
+         scoreCell.innerHTML = player.score;
+      });
+   }
+
+   // Call the function to populate the leaderboard
+   populateLeaderboard();
 
 
     
